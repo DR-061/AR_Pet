@@ -325,41 +325,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &544155677 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4225229934326713055, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-  m_PrefabInstance: {fileID: 1876187574}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &544155680 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6186343462627509260, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-  m_PrefabInstance: {fileID: 1876187574}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544155677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
---- !u!114 &544155683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544155677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 544155680}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: PersonajilloCard
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 544155680}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,73 +539,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1494267544 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8042926471940325355, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-  m_PrefabInstance: {fileID: 96945036282564314}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1494267547 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6673155575004875324, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-  m_PrefabInstance: {fileID: 96945036282564314}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494267544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetBehaviour
---- !u!114 &1494267550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494267544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1494267547}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Astronaut
-  mDatasetName: Vuforia/VuforiaMars_Images.xml
-  mCastedBehaviour: {fileID: 1494267547}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!1 &1665513890 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1977635946031979436, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-  m_PrefabInstance: {fileID: 96945036282564314}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1665513897
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665513890}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1759227685
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +591,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1938111142430341676, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
+      propertyPath: mHiddenRoot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938111142430341676, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
+      propertyPath: mMeshFilter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938111142430341676, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
+      propertyPath: mMeshRenderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2311721517925946036, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1575
@@ -745,46 +655,10 @@ PrefabInstance:
       propertyPath: OnTargetFound.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1759227686}
-    - target: {fileID: 6186343462627509260, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mWidth
-      value: 0.13538462
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186343462627509260, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mPreview
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186343462627509260, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mAspectRatio
-      value: 1.4772727
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186343462627509260, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mTrackableName
-      value: PersonajilloCard
-      objectReference: {fileID: 0}
-    - target: {fileID: 6186343462627509260, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mRuntimeTexture
-      value: 
-      objectReference: {fileID: 2800000, guid: ccc9b489ac73671458c9fffda191a456, type: 3}
-    - target: {fileID: 9034878052914437180, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mHiddenRoot
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034878052914437180, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mMeshFilter
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034878052914437180, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      propertyPath: mMeshRenderer
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9034878052914437180, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4225229934326713055, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 544155683}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d38a587a1e281b40bf70f6b3c6033bc, type: 3}
 --- !u!1001 &96945036282564314
 PrefabInstance:
@@ -794,6 +668,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 965756650580565170, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
+      propertyPath: mHiddenRoot
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 965756650580565170, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
+      propertyPath: mMeshFilter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 965756650580565170, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
+      propertyPath: mMeshRenderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1178580619603726043, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.1549
@@ -834,25 +720,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3774666052187838169, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-      propertyPath: mHiddenRoot
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774666052187838169, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-      propertyPath: mMeshFilter
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774666052187838169, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-      propertyPath: mMeshRenderer
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8042926471940325355, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
       propertyPath: m_Name
       value: ImageTarget 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042926471940325355, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8233081507657815431, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
       propertyPath: OnTargetLost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -862,17 +732,10 @@ PrefabInstance:
       propertyPath: OnTargetFound.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1759227686}
-    m_RemovedComponents:
-    - {fileID: 3774666052187838169, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8042926471940325355, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1494267550}
-    - targetCorrespondingSourceObject: {fileID: 1977635946031979436, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1665513897}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d1d3da4df0bab42812ab7c0092841c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

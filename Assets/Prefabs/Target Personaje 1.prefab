@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2311721517925946036}
   - component: {fileID: 6186343462627509260}
   - component: {fileID: 4861963286424575216}
-  - component: {fileID: 9034878052914437180}
+  - component: {fileID: 1938111142430341676}
   m_Layer: 0
   m_Name: Target Personaje 1
   m_TagString: Untagged
@@ -61,7 +61,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 9034878052914437180}
+  mPreview: {fileID: 1938111142430341676}
 --- !u!114 &4861963286424575216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9034878052914437180
+--- !u!114 &1938111142430341676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

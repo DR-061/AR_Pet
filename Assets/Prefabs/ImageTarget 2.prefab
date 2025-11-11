@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6173450337768213138}
   - component: {fileID: 4954515722519799484}
   - component: {fileID: 1981203163061667872}
+  - component: {fileID: 4610942220526109647}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -147,6 +148,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2f7fbf7c346194b86d16e6c7f1ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionBehaviour
+--- !u!54 &4610942220526109647
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977635946031979436}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8042926471940325355
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +186,7 @@ GameObject:
   - component: {fileID: 1178580619603726043}
   - component: {fileID: 6673155575004875324}
   - component: {fileID: 8233081507657815431}
-  - component: {fileID: 3774666052187838169}
+  - component: {fileID: 965756650580565170}
   m_Layer: 0
   m_Name: ImageTarget 2
   m_TagString: Untagged
@@ -208,7 +236,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 3774666052187838169}
+  mPreview: {fileID: 965756650580565170}
 --- !u!114 &8233081507657815431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +305,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3774666052187838169
+--- !u!114 &965756650580565170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
