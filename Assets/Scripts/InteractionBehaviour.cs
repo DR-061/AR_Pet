@@ -1,6 +1,8 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(Rigidbody))]
 public class InteractionBehaviour : MonoBehaviour
 {
     private Animator animator;
