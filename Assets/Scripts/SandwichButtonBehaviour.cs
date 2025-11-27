@@ -6,6 +6,7 @@ public class SandwichButtonBehaviour : MonoBehaviour, IDragHandler, IPointerDown
     private SandwichBehaviour sandwich;
     private bool isDragging;
     private GameObject pressedObject;
+    private GameObject releasedObject;
 
     private void Start()
     {
@@ -21,8 +22,6 @@ public class SandwichButtonBehaviour : MonoBehaviour, IDragHandler, IPointerDown
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        GameObject releasedObject = eventData.pointerCurrentRaycast.gameObject;
-
         if (releasedObject && releasedObject.CompareTag("Pet"))
         {
             releasedObject.GetComponent<PetBehaviour>().FeedSandwich();
@@ -41,5 +40,17 @@ public class SandwichButtonBehaviour : MonoBehaviour, IDragHandler, IPointerDown
             isDragging = true;
             sandwich.ToggleSandwich(true);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        releasedObject = other.gameObject;
+
+        Debug.Log(releasedObject.name);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        releasedObject = null;
     }
 }

@@ -296,13 +296,17 @@ PrefabInstance:
       propertyPath: OnTargetFound.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8095545142950623305, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1052
+      objectReference: {fileID: 0}
     - target: {fileID: 8239603362477857344, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: mTargetName
       value: PersonajilloCard
       objectReference: {fileID: 0}
     - target: {fileID: 8419602198181351385, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: m_Name
-      value: PersonajilloCard Variant
+      value: PersonajilloPet
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8239603362477857344, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
