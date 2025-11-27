@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PersonajilloPet
       objectReference: {fileID: 0}
+    - target: {fileID: 8453381742859511688, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
+      propertyPath: m_Name
+      value: HungerBar
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8239603362477857344, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
     m_RemovedGameObjects:

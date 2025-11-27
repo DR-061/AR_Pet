@@ -6,23 +6,24 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody))]
 public class SandwichBehaviour : MonoBehaviour
 {
-    [SerializeField] private Camera mainCam;
-    private bool isActive = true;
-    [SerializeField] private float disappearTime;
     private Rigidbody rb;
-    private bool isInMouth;
-    [SerializeField] Slider hungerBar;
+    [SerializeField] private Camera mainCam;
+    [SerializeField] private Slider hungerBar;
+    private GameObject mouth;
+
+    private bool isActive;
+    [SerializeField] private float sandiwchOffset = 0.5f;
+    [SerializeField] private float disappearTime;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        isActive = true;
     }
 
     private void Update()
     {
         if (isActive) MoveToMousePos();
-
-        
     }
 
     public void ToggleSandwich(bool isActive)
@@ -39,28 +40,32 @@ public class SandwichBehaviour : MonoBehaviour
         }
         else
         {
-            if (isInMouth)
+            if (mouth)
             {
+                hungerBar = mouth.transform.parent.GetComponentInChildren<Slider>();
                 hungerBar.value = hungerBar.value - 4f;
                 AdManager.instance.ShowAd();
             }
+
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            StartCoroutine(DisappearSandwich());
+            StartCoroutine(DisappearSandwich(mouth));
         }     
     }
 
     private void MoveToMousePos()
     {
         Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
-        mouseScreenPos.z = 1;
+        mouseScreenPos.z = 1f;
         Vector3 worldPos = mainCam.ScreenToWorldPoint(mouseScreenPos);
+        worldPos.z = hungerBar.transform.position.z + sandiwchOffset;
         transform.position = worldPos;
     }
 
-    private IEnumerator DisappearSandwich()
+    private IEnumerator DisappearSandwich(bool inmediate)
     {
-        yield return new WaitForSeconds(disappearTime);
+        float delay = inmediate ? 0f : disappearTime;
+        yield return new WaitForSeconds(delay);
         gameObject.SetActive(false);
 
     }
@@ -68,15 +73,15 @@ public class SandwichBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mouth"))
         {
-            isInMouth = true;
+            mouth = other.gameObject;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Mouth"))
+        if (other.gameObject.CompareTag("Mouth") && other.gameObject == mouth)
         {
-            isInMouth = false;
+            mouth = null;
         }
     }
 }
