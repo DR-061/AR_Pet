@@ -7,7 +7,7 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
     [SerializeField] private string androidID;
     [SerializeField] private string iosID;
     [SerializeField] private bool testMode;
-    private string placementID = "Interstitial_";
+    private string placementID = "Interstitial_";//for Ads with rewards-->  "Rewarded_"
     void Awake()
     {
         if (!instance)
@@ -62,6 +62,11 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         Debug.Log("El anuncio se ha completado");
+        //for Ads with rewards-->
+        //if (showCompletionState == UnityAdsShowCompletionState.COMPLETED)
+        //{
+        //   Aqui Codigo de las recompensas
+        //}
     }
 
     public void OnInitializationComplete()
