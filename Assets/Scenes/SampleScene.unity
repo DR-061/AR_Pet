@@ -683,7 +683,6 @@ GameObject:
   - component: {fileID: 1688702808}
   - component: {fileID: 1688702807}
   - component: {fileID: 1688702806}
-  - component: {fileID: 1688702805}
   m_Layer: 0
   m_Name: WatchAdButton
   m_TagString: Untagged
@@ -711,18 +710,6 @@ RectTransform:
   m_AnchoredPosition: {x: 353.6, y: 54.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1688702805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688702803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3092ae240f1cd5a4d8b5fce82e0c8fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SandwichButtonBehaviour
 --- !u!114 &1688702806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6066,10 +6053,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1831194443384524378, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1831194443384524378, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: OnTargetLost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 542301796}
@@ -6081,20 +6064,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MayorcilloPet
       objectReference: {fileID: 0}
-    - target: {fileID: 4971758507212004314, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+    - target: {fileID: 4229941817180310257, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: mHiddenRoot
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4971758507212004314, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+    - target: {fileID: 4229941817180310257, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: mMeshFilter
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4971758507212004314, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+    - target: {fileID: 4229941817180310257, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: mMeshRenderer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5026219883383393292, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
-      propertyPath: mPreview
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5434425966430872112, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
@@ -6146,8 +6125,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4971758507212004314, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
-    - {fileID: 5897103107434408186, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+    - {fileID: 4229941817180310257, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

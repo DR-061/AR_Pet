@@ -135,4 +135,9 @@ public class SandwichBehaviour : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public bool hasRemainingSandwiches()
+    {
+        return sandwichesAmount > 0;
+    }
 }

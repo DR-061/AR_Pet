@@ -22,7 +22,7 @@ public class SandwichButtonBehaviour : MonoBehaviour, IDragHandler, IPointerDown
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (pressedObject.CompareTag("SandwichButton"))
+        if (pressedObject.CompareTag("SandwichButton") && sandwich.hasRemainingSandwiches())
         {
             sandwich.ToggleSandwich(false);
             pressedObject = null;
@@ -32,7 +32,7 @@ public class SandwichButtonBehaviour : MonoBehaviour, IDragHandler, IPointerDown
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (!isDragging && pressedObject && pressedObject.CompareTag("SandwichButton"))
+        if (!isDragging && pressedObject && pressedObject.CompareTag("SandwichButton") && sandwich.hasRemainingSandwiches())
         {
             isDragging = true;
             sandwich.ToggleSandwich(true);
