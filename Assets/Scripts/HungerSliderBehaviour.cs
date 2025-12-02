@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 
@@ -10,21 +9,28 @@ public class HungerSlider : MonoBehaviour
 
     [SerializeField] PetBehaviour pet;
 
+    private bool isStarving;
+
     private void Awake()
     {
         hungerSlider = GetComponent<Slider>();
-        hungerSlider.value = hungerSlider.minValue;
-
+        hungerSlider.onValueChanged.AddListener((value) =>
+        {
+            if (!isStarving && value >= hungerSlider.maxValue)
+            {
+                isStarving = true;
+                pet.PlayCrySound();
+            }
+            else if (value < hungerSlider.maxValue)
+            {
+                isStarving = false;
+            }
+        });
     }
 
-    void Update()
+    private void Update()
     {
         hungerSlider.value += hungerincrease * Time.deltaTime;
-
-        if (hungerSlider.value >= hungerSlider.maxValue)
-        {
-            pet.PlayCrySound();
-        }
     }
 
     public void AddHunger(float food)

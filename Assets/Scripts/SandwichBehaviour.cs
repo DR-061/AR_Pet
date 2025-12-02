@@ -16,7 +16,7 @@ public class SandwichBehaviour : MonoBehaviour
     [SerializeField] private float sandiwchOffset = 0.5f;
     [SerializeField] private float disappearTime;
 
-    [SerializeField] public static int sandwichesAmount = 4;
+    [SerializeField] private int _sandwichesAmount = 4;
     [SerializeField] private TextMeshProUGUI sandwichesAmountText;
     [SerializeField] private Button watchAddButton;
     [SerializeField] private ParticleSystem eatParticles;
@@ -30,7 +30,7 @@ public class SandwichBehaviour : MonoBehaviour
 
     private void Start()
     {
-        UpdateSandiwches(0);
+        AddSandiwches(0);
         watchAddButton.onClick.AddListener(() => AdManager.instance.ShowAd());
     }
 
@@ -55,7 +55,7 @@ public class SandwichBehaviour : MonoBehaviour
         }
         else
         {
-            UpdateSandiwches(-1);
+            AddSandiwches(-1);
 
             if (mouth) Feed();
 
@@ -94,20 +94,11 @@ public class SandwichBehaviour : MonoBehaviour
 
     }
 
-    public void UpdateSandiwches(int amountChange)
+    public void AddSandiwches(int amountChange)
     {
-        sandwichesAmount += amountChange;
-
-        sandwichesAmountText.text = $"x {sandwichesAmount}";
-
-        if (sandwichesAmount <= 0)
-        {
-            watchAddButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            watchAddButton.gameObject.SetActive(false);
-        }
+        _sandwichesAmount += amountChange;
+        sandwichesAmountText.SetText($"x {_sandwichesAmount}");
+        watchAddButton.gameObject.SetActive(_sandwichesAmount <= 0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -137,8 +128,20 @@ public class SandwichBehaviour : MonoBehaviour
         }
     }
 
+    public int GetSandwichesAmount()
+    {
+        return _sandwichesAmount;
+    }
+
+    public void SetSandwichesAmount(int amount)
+    {
+        _sandwichesAmount = amount;
+        sandwichesAmountText.SetText($"x {_sandwichesAmount}");
+        watchAddButton.gameObject.SetActive(_sandwichesAmount <= 0);
+    }
+
     public bool hasRemainingSandwiches()
     {
-        return sandwichesAmount > 0;
+        return _sandwichesAmount > 0;
     }
 }

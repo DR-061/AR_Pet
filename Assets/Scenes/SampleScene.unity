@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HungryFileManager
   hungrySlider: {fileID: 77467955}
-  cooldown: 0
-  tmp: {fileID: 1816585572}
+  cooldown: 0.5
+  sandwichAmountText: {fileID: 1816585572}
 --- !u!4 &17096383
 Transform:
   m_ObjectHideFlags: 0
@@ -6169,6 +6169,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083086937463973981, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920432041838075559, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

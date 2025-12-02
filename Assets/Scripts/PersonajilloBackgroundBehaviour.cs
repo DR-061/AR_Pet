@@ -2,21 +2,26 @@ using UnityEngine;
 
 public class PersonajilloBackgroundBehaviour : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float initialXOffset;
-    [SerializeField] float finalXOffset;
+    [SerializeField] float speed = 100f;
 
-    void Update()
+    private RectTransform rectTransform;
+    private float imageWidth;
+
+
+    private void Start()
     {
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        rectTransform = GetComponent<RectTransform>();
+        imageWidth = rectTransform.sizeDelta.x * rectTransform.localScale.x;
+    }
 
-        float distanceToCamera = transform.position.z - Camera.main.transform.position.z;
-        float rightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, distanceToCamera)).x;
-        float leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distanceToCamera)).x;
+    private void Update()
+    {
+        rectTransform.anchoredPosition += Vector2.right * speed * Time.deltaTime;
 
-        if (transform.position.x >= rightEdge + finalXOffset)
+        if (rectTransform.anchoredPosition.x >= imageWidth)
         {
-            transform.position = new Vector3(leftEdge - initialXOffset, transform.position.y, transform.position.z);
+            float offset = -2f * imageWidth;
+            rectTransform.anchoredPosition += new Vector2(offset, 0);
         }
     }
 }

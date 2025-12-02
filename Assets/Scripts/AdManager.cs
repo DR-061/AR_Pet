@@ -67,7 +67,7 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
         Debug.Log("El anuncio se ha completado");
         if (showCompletionState == UnityAdsShowCompletionState.COMPLETED)
         {
-            sandwichBehaviour.UpdateSandiwches(1);
+            sandwichBehaviour.AddSandiwches(1);
         }
 
     }

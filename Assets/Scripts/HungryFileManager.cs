@@ -9,41 +9,40 @@ public class HungryFileManager : MonoBehaviour
     [SerializeField] Slider hungrySlider;
     private string path;
     private float timer;
-    [SerializeField] private float cooldown;
-    [SerializeField] TextMeshProUGUI tmp;
+    [SerializeField] private float cooldown = 0.5f;
+    [SerializeField] TextMeshProUGUI sandwichAmountText;
 
+    private SandwichBehaviour sandwich;
 
-
-    struct SliderValues
+    private struct SliderValues
     {
         public float value;
         public int sandwichAmount;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         path = Application.persistentDataPath + "/savedata.json";
+        GameObject sandwichObject = GameObject.FindWithTag("Sandwich");
+        sandwich = sandwichObject.GetComponent<SandwichBehaviour>();
         Load();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         timer += Time.deltaTime;
-        if (timer > cooldown) 
+        if (timer > cooldown)
         {
             save();
             timer = 0;
         }
-
     }
 
-    void save()
+    private void save()
     {
         SliderValues s = new SliderValues();
         s.value = hungrySlider.value;
-        s.sandwichAmount = SandwichBehaviour.sandwichesAmount;
+        s.sandwichAmount = sandwich.GetSandwichesAmount();
 
         string jsonText = JsonUtility.ToJson(s);
 
@@ -52,8 +51,7 @@ public class HungryFileManager : MonoBehaviour
         streamWriter.Close();
     }
 
-
-    void Load()
+    private void Load()
     {
         if (File.Exists(path))
         {
@@ -61,8 +59,10 @@ public class HungryFileManager : MonoBehaviour
             string jsonText = streamReader.ReadToEnd();
             SliderValues s = JsonUtility.FromJson<SliderValues>(jsonText);
             hungrySlider.value = s.value;
-            SandwichBehaviour.sandwichesAmount = s.sandwichAmount;
-            tmp.SetText(s.sandwichAmount.ToString());
+
+            sandwich.SetSandwichesAmount(s.sandwichAmount);
+
+            sandwichAmountText.SetText($"x {s.sandwichAmount}");
             streamReader.Close();
         }
     }
