@@ -19,9 +19,11 @@ public class SandwichBehaviour : MonoBehaviour
     [SerializeField] private int sandwichesAmount = 4;
     [SerializeField] private TextMeshProUGUI sandwichesAmountText;
     [SerializeField] private Button watchAddButton;
+    [SerializeField] private ParticleSystem eatParticles;
 
     private void Awake()
     {
+        eatParticles.Stop();
         rb = GetComponent<Rigidbody>();
         isActive = true;
     }
@@ -53,18 +55,21 @@ public class SandwichBehaviour : MonoBehaviour
         {
             UpdateSandiwches(-1);
 
-            if (mouth)
-            {
-                hungerBar = mouth.transform.parent.GetComponentInChildren<Slider>();
-                hungerBar.value = hungerBar.value - 4f;
-            }
+            if (mouth) Feed();
 
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
 
-            if (gameObject.activeSelf)
-                StartCoroutine(DisappearSandwich(mouth));
+            if (gameObject.activeSelf) StartCoroutine(DisappearSandwich(mouth));
         }
+    }
+
+    private void Feed()
+    {
+        eatParticles.gameObject.transform.position = mouth.transform.position;
+        hungerBar = mouth.transform.parent.GetComponentInChildren<Slider>();
+        hungerBar.value = hungerBar.value - 4f;
+        eatParticles.Play();
     }
 
     private void MoveToMousePos()
