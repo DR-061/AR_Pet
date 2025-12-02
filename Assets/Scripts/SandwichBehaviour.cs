@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -15,10 +16,20 @@ public class SandwichBehaviour : MonoBehaviour
     [SerializeField] private float sandiwchOffset = 0.5f;
     [SerializeField] private float disappearTime;
 
+    [SerializeField] private int sandwichesAmount = 4;
+    [SerializeField] private TextMeshProUGUI sandwichesAmountText;
+    [SerializeField] private Button watchAddButton;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         isActive = true;
+    }
+
+    private void Start()
+    {
+        UpdateSandiwches(0);
+        watchAddButton.onClick.AddListener(() => AdManager.instance.ShowAd());
     }
 
     private void Update()
@@ -40,17 +51,20 @@ public class SandwichBehaviour : MonoBehaviour
         }
         else
         {
+            UpdateSandiwches(-1);
+
             if (mouth)
             {
                 hungerBar = mouth.transform.parent.GetComponentInChildren<Slider>();
                 hungerBar.value = hungerBar.value - 4f;
-                AdManager.instance.ShowAd();
             }
 
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            StartCoroutine(DisappearSandwich(mouth));
-        }     
+
+            if (gameObject.activeSelf)
+                StartCoroutine(DisappearSandwich(mouth));
+        }
     }
 
     private void MoveToMousePos()
@@ -69,6 +83,23 @@ public class SandwichBehaviour : MonoBehaviour
         gameObject.SetActive(false);
 
     }
+
+    public void UpdateSandiwches(int amountChange)
+    {
+        sandwichesAmount += amountChange;
+
+        sandwichesAmountText.text = $"x {sandwichesAmount}";
+
+        if (sandwichesAmount <= 0)
+        {
+            watchAddButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            watchAddButton.gameObject.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Mouth"))
@@ -82,6 +113,17 @@ public class SandwichBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Mouth") && other.gameObject == mouth)
         {
             mouth = null;
+        }
+    }
+
+    private int marks = 0;
+
+    public void mark()
+    {
+        ++marks;
+        if (marks == 2)
+        {
+            gameObject.SetActive(false);
         }
     }
 }

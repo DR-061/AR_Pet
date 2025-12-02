@@ -1,5 +1,5 @@
 {
-  "dependencies": {
+    "dependencies": {
     "com.ptc.vuforia.engine": "file:com.ptc.vuforia.engine-11.4.4.tgz",
     "com.unity.ads": "4.16.4",
     "com.unity.ai.navigation": "2.0.9",

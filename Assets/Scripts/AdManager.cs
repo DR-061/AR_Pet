@@ -7,8 +7,11 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
     [SerializeField] private string androidID;
     [SerializeField] private string iosID;
     [SerializeField] private bool testMode;
-    private string placementID = "Interstitial_";
-    void Awake()
+    private string placementID = "Rewarded_";
+
+    private SandwichBehaviour sandwichBehaviour;
+
+    private void Awake()
     {
         if (!instance)
         {
@@ -31,12 +34,9 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
         placementID += "iOS";
 
 #endif    
-    }
 
-
-    void Update()
-    {
-        
+        sandwichBehaviour = GameObject.FindWithTag("Sandwich").GetComponent<SandwichBehaviour>();
+        sandwichBehaviour.mark();
     }
 
     public void ShowAd()
@@ -62,6 +62,10 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         Debug.Log("El anuncio se ha completado");
+        if (showCompletionState == UnityAdsShowCompletionState.COMPLETED)
+        {
+            sandwichBehaviour.UpdateSandiwches(1);
+        }
     }
 
     public void OnInitializationComplete()
