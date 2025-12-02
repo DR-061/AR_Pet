@@ -42,6 +42,8 @@ public class SandwichBehaviour : MonoBehaviour
 
     public void ToggleSandwich(bool isActive)
     {
+        if (!hasRemainingSandwiches()) return;
+
         this.isActive = isActive;
 
         if (isActive)
