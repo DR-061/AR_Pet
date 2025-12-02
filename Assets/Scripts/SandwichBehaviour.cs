@@ -16,7 +16,7 @@ public class SandwichBehaviour : MonoBehaviour
     [SerializeField] private float sandiwchOffset = 0.5f;
     [SerializeField] private float disappearTime;
 
-    [SerializeField] private int sandwichesAmount = 4;
+    [SerializeField] public static int sandwichesAmount = 4;
     [SerializeField] private TextMeshProUGUI sandwichesAmountText;
     [SerializeField] private Button watchAddButton;
     [SerializeField] private ParticleSystem eatParticles;
