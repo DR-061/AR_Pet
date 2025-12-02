@@ -43,7 +43,7 @@ PrefabInstance:
     - target: {fileID: 207538882267699265, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: mPreview
       value: 
-      objectReference: {fileID: 4971758507212004314}
+      objectReference: {fileID: 4229941817180310257}
     - target: {fileID: 207538882267699265, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: mAspectRatio
       value: 1.4772727
@@ -155,6 +155,10 @@ PrefabInstance:
 '
       objectReference: {fileID: 0}
     - target: {fileID: 6793783933049625111, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793783933049625111, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: OnTargetLost.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -245,11 +249,22 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8419602198181351385, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4971758507212004314}
+      addedObject: {fileID: 4229941817180310257}
     - targetCorrespondingSourceObject: {fileID: 8453381742859511688, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5261377254407689260}
   m_SourcePrefab: {fileID: 100100000, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
+--- !u!114 &1099820211670824434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5215928675884097983, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
+  m_PrefabInstance: {fileID: 5125637168478770253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118683560080871007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560ac10fd25595543aaff8630387477e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PetBehaviour
 --- !u!4 &2826767693941105896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6925227690775523493, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
@@ -273,12 +288,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HungerSlider
   hungerincrease: 1
+  pet: {fileID: 1099820211670824434}
 --- !u!1 &3745170035912858516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8419602198181351385, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
   m_PrefabInstance: {fileID: 5125637168478770253}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4971758507212004314
+--- !u!114 &4229941817180310257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,9 +425,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 345125240d788db4fbd170a3338ae715, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2013944470033235313}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 345125240d788db4fbd170a3338ae715, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5897103107434408186}
   m_SourcePrefab: {fileID: 100100000, guid: 345125240d788db4fbd170a3338ae715, type: 3}
 --- !u!1 &8166153381021613394 stripped
 GameObject:
@@ -478,18 +491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a980739e9cc82140be8904866b1eaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionBehaviour
---- !u!114 &5897103107434408186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8166153381021613394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29cda0e922c05a4bb9b5cb0210a30c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PetBehaviour
 --- !u!4 &8799982645448910824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 345125240d788db4fbd170a3338ae715, type: 3}
