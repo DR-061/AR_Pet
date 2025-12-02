@@ -7,11 +7,14 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
     [SerializeField] private string androidID;
     [SerializeField] private string iosID;
     [SerializeField] private bool testMode;
+
     private string placementID = "Rewarded_";
 
     private SandwichBehaviour sandwichBehaviour;
 
     private void Awake()
+
+
     {
         if (!instance)
         {
@@ -66,6 +69,7 @@ public class AdManager : MonoBehaviour, IUnityAdsShowListener, IUnityAdsInitiali
         {
             sandwichBehaviour.UpdateSandiwches(1);
         }
+
     }
 
     public void OnInitializationComplete()
