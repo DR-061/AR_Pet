@@ -20,6 +20,7 @@ public class SandwichBehaviour : MonoBehaviour
     [SerializeField] private TextMeshProUGUI sandwichesAmountText;
     [SerializeField] private Button watchAddButton;
     [SerializeField] private ParticleSystem eatParticles;
+    [SerializeField] private AudioSource eatAudioSource;
 
     private void Awake()
     {
@@ -41,6 +42,8 @@ public class SandwichBehaviour : MonoBehaviour
 
     public void ToggleSandwich(bool isActive)
     {
+        if (!hasRemainingSandwiches()) return;
+
         this.isActive = isActive;
 
         if (isActive)
@@ -69,6 +72,9 @@ public class SandwichBehaviour : MonoBehaviour
         eatParticles.gameObject.transform.position = mouth.transform.position;
         hungerBar = mouth.transform.parent.GetComponentInChildren<Slider>();
         hungerBar.value = hungerBar.value - 4f;
+        PetBehaviour pet = mouth.transform.parent.GetComponent<PetBehaviour>();
+        pet.PlayEatSound();
+
         eatParticles.Play();
     }
 
@@ -130,5 +136,10 @@ public class SandwichBehaviour : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public bool hasRemainingSandwiches()
+    {
+        return sandwichesAmount > 0;
     }
 }
