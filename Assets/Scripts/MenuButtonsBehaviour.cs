@@ -6,7 +6,7 @@ public class MenuButtonsBehaviour : MonoBehaviour
     //change scene AR
     public void ChangeScene()
     {
-        SceneManager.LoadScene("ARScene");
+        SceneManager.LoadScene("SampleScene");
     }
     //close apk AR
     public void ExitGameAR()
