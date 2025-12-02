@@ -43,7 +43,7 @@ PrefabInstance:
     - target: {fileID: 207538882267699265, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: mPreview
       value: 
-      objectReference: {fileID: 4229941817180310257}
+      objectReference: {fileID: 6652342188000048179}
     - target: {fileID: 207538882267699265, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: mAspectRatio
       value: 1.4772727
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3083537630606265066, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: m_Value
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3083537630606265066, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: m_MaxValue
@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6793783933049625111, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6793783933049625111, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       propertyPath: OnTargetLost.m_PersistentCalls.m_Calls.Array.size
@@ -249,52 +249,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8419602198181351385, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4229941817180310257}
-    - targetCorrespondingSourceObject: {fileID: 8453381742859511688, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5261377254407689260}
+      addedObject: {fileID: 6652342188000048179}
   m_SourcePrefab: {fileID: 100100000, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
---- !u!114 &1099820211670824434 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5215928675884097983, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
-  m_PrefabInstance: {fileID: 5125637168478770253}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7118683560080871007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560ac10fd25595543aaff8630387477e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PetBehaviour
 --- !u!4 &2826767693941105896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6925227690775523493, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
   m_PrefabInstance: {fileID: 5125637168478770253}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3634855910303511493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8453381742859511688, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
-  m_PrefabInstance: {fileID: 5125637168478770253}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5261377254407689260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3634855910303511493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd93d647a999904ab9756ebf4e25967, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HungerSlider
-  hungerincrease: 1
-  pet: {fileID: 1099820211670824434}
 --- !u!1 &3745170035912858516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8419602198181351385, guid: d566bf6525e10974d91e2940c0ef8bc3, type: 3}
   m_PrefabInstance: {fileID: 5125637168478770253}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4229941817180310257
+--- !u!114 &6652342188000048179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
