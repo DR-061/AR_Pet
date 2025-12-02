@@ -20,7 +20,6 @@ public class SandwichBehaviour : MonoBehaviour
     [SerializeField] private TextMeshProUGUI sandwichesAmountText;
     [SerializeField] private Button watchAddButton;
     [SerializeField] private ParticleSystem eatParticles;
-    [SerializeField] private AudioSource eatAudioSource;
 
     private void Awake()
     {

@@ -1,4 +1,5 @@
 using System.IO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,9 @@ public class HungryFileManager : MonoBehaviour
     private string path;
     private float timer;
     [SerializeField] private float cooldown;
+    [SerializeField] TextMeshProUGUI tmp;
+
+
 
     struct SliderValues
     {
@@ -58,6 +62,7 @@ public class HungryFileManager : MonoBehaviour
             SliderValues s = JsonUtility.FromJson<SliderValues>(jsonText);
             hungrySlider.value = s.value;
             SandwichBehaviour.sandwichesAmount = s.sandwichAmount;
+            tmp.SetText(s.sandwichAmount.ToString());
             streamReader.Close();
         }
     }

@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HungryFileManager
   hungrySlider: {fileID: 77467955}
+  cooldown: 0
+  tmp: {fileID: 1816585572}
 --- !u!4 &17096383
 Transform:
   m_ObjectHideFlags: 0
@@ -6190,5 +6192,4 @@ SceneRoots:
   - {fileID: 2008531752}
   - {fileID: 2152766482603551492}
   - {fileID: 1797200324}
-  - {fileID: 2008531752}
   - {fileID: 17096383}
