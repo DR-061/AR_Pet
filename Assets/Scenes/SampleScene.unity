@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf650802424465438c82517effd4f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HungryFileManager
+  JsonFile: /savedata.json
   hungrySlider: {fileID: 77467955}
   cooldown: 0.5
   sandwichAmountText: {fileID: 1816585572}
@@ -177,6 +178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &250500083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8166153381021613394, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+  m_PrefabInstance: {fileID: 8625012583880821373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -6099,6 +6105,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 765663316708386612, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+      propertyPath: hungerincrease
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099820211670824434, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+      propertyPath: characterModel
+      value: 
+      objectReference: {fileID: 250500083}
+    - target: {fileID: 1831194443384524378, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1831194443384524378, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: OnTargetLost.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6122,6 +6140,14 @@ PrefabInstance:
     - target: {fileID: 4229941817180310257, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: mMeshRenderer
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026219883383393292, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+      propertyPath: mPreview
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152097523448159338, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+      propertyPath: m_Size.y
+      value: 5.59
       objectReference: {fileID: 0}
     - target: {fileID: 5434425966430872112, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6177,6 +6203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4229941817180310257, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
+    - {fileID: 5261377254407689260, guid: 21f3e6f92a9f4794598a57e255e7de61, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

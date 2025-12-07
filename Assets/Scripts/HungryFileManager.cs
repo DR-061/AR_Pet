@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HungryFileManager : MonoBehaviour
 {
-
+    [SerializeField] string JsonFile;
     [SerializeField] Slider hungrySlider;
     private string path;
     private float timer;
@@ -22,7 +22,7 @@ public class HungryFileManager : MonoBehaviour
 
     private void Start()
     {
-        path = Application.persistentDataPath + "/savedata.json";
+        path = Application.persistentDataPath + JsonFile;
         GameObject sandwichObject = GameObject.FindWithTag("Sandwich");
         sandwich = sandwichObject.GetComponent<SandwichBehaviour>();
         Load();
